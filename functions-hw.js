@@ -47,10 +47,10 @@ function isCharVowel(cvowel) {
 
 let sum = 0 
 
-const sumArray = (...args) => {
+const sumArray = (args) => {
     console.log(args)
     console.log(args[0])
-    args[0].forEach((num) => { sum += num})
+    args.forEach((num) => { sum += num})
     return sum
 }
 
@@ -68,3 +68,52 @@ function multiplyArray(numArr) {
 
 // 6
 
+let numArgs = (...args) => {
+    console.log(args.length)
+}
+
+// 7 
+
+function reverseString(string) {
+    let backWards = ''
+    for (let i = string.length - 1; i >= 0; i-- ) {
+        backWards += string[i]
+    }
+    return backWards
+}
+
+// console.log(reverseString('rockstar'))
+
+// 8 
+
+let longestStringInArray = (num1) => {
+    let arr1 = num1[0].length
+    console.log(arr1)
+    let arr2 = num1[0]
+    console.log(arr2)
+
+    for (i = 1; i < num1.length; i++) {
+        let wordC = num1[i].length
+        if (wordC > arr1) {
+            arr1 = wordC
+            arr2 = num1[i]
+        }
+    }
+    return arr2
+}
+
+// console.log(longestStringInArray(['nyc', 'death', 'one piece']))
+
+// 9 
+
+function stringsLongerThan(num1, num2){
+    let x = []
+     num1.forEach((check) => {
+        if (check.length > num2){
+            x.push(check)
+        }
+    })
+console.log(x)
+}
+
+// stringsLongerThan(['one piece', 'Tokyo Ghoul', 'Five1'], 5)
