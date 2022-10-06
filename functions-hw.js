@@ -59,8 +59,12 @@ const sumArray = (...args) => {
 // 5
 
 function multiplyArray(numArr) {
-    let newSum = 0
-    numArr.forEach((times) => { newSum += times })
+    let newSum = 1
+    numArr.forEach(function(times) { newSum *= times })
+    return newSum
 }
 
-console.log(multiplyArray(5, 10, 15))
+// console.log(multiplyArray([5, 10, 15]))
+
+// 6
+
